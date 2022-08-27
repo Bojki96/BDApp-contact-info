@@ -1,0 +1,33 @@
+import 'package:intl/intl.dart';
+import 'package:reactive_forms/reactive_forms.dart';
+
+Future<void> sleep([Duration? duration]) {
+  return Future.delayed(duration ?? const Duration(seconds: 3));
+}
+
+String formatDate(DateTime date, {String format = 'yMMMMd'}) {
+  return DateFormat(format, 'hr_HR').format(date);
+}
+
+bool checkIfIsSameDay(DateTime? dateTimeOne, DateTime? dateTimeTwo) {
+  return dateTimeOne?.day == dateTimeTwo?.day &&
+      dateTimeOne?.year == dateTimeTwo?.year &&
+      dateTimeOne?.month == dateTimeTwo?.month;
+}
+
+String formatTime(DateTime date, {String format = 'HH:mm'}) {
+  return DateFormat(format).format(date);
+}
+
+String formatCurrency(
+  double number, {
+  String locale = 'hr_HR',
+  String currencySymbol = '€',
+  int decimalDigits = 2,
+}) {
+  return NumberFormat.currency(
+    locale: locale,
+    symbol: currencySymbol,
+    decimalDigits: decimalDigits,
+  ).format(number);
+}

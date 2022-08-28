@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_template/notifications/local_notifications.dart';
 
 import 'app.dart';
 import 'local_storage/simple_preferences.dart';
@@ -10,6 +11,7 @@ import 'local_storage/simple_preferences.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SimplePreferences.init();
+  LocalNotifications.init();
 // TODO: SET ORIENTATION
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

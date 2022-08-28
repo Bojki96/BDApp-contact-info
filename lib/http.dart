@@ -40,6 +40,16 @@ class HTTP {
   //   return response.data['token'];
   // }
 
+// Future<List<Module>> getFrontCover(pathUrl) async {
+//     Response response = await client.get(pathUrl);
+
+//     return response.data['modules']
+//         .map<Module>(
+//           (json) => Module.fromJson(json),
+//         )
+//         .toList();
+//   }
+
 }
 
 final http = HTTP();

@@ -3,12 +3,9 @@ import 'package:reactive_forms/reactive_forms.dart';
 
 Map<String, String Function(Object)> formErrorMessages = {
   ValidationMessage.required: (p0) => 'Ovo polje je obavezno',
-  ValidationMessage.email: (p0) =>
-      'Ovo polje je obavezno' 'Morate unijeti valjan oblik email adrese',
-  ValidationMessage.minLength: (p0) =>
-      'Ovo polje je obavezno' 'Potrebno je unijeti više znakova',
-  ValidationMessage.mustMatch: (p0) =>
-      'Ovo polje je obavezno' 'Polja se ne podudaraju',
+  ValidationMessage.email: (p0) => 'Morate unijeti valjan oblik email adrese',
+  ValidationMessage.minLength: (p0) => 'Potrebno je unijeti više znakova',
+  ValidationMessage.mustMatch: (p0) => 'Polja se ne podudaraju',
 };
 
 ValidatorFunction mustMatch(String controlName, String matchingControlName) {

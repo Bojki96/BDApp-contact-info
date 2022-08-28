@@ -15,7 +15,7 @@ class ErrorScreen extends StatelessWidget {
 }
 
 final mainRouter = GoRouter(
-  initialLocation: '/search-services',
+  initialLocation: '/landing',
   errorBuilder: (context, state) => const ErrorScreen(),
   navigatorBuilder: (context, state, child) {
     return Material(

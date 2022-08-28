@@ -19,6 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 Run flutter upgrade
 Run flutter pub upgrade --major-versions
 Check all TODOs
+Remove unnecesary dependedcies
 
 # freezed setup 05.07.2022.
 
@@ -50,3 +51,22 @@ class MyEntity with _$MyEntity {
 3) add under dev dependencies build_runner:
 and flutter_gen_runner:
 4) run command "flutter pub run build_runner build" or "flutter pub run build_runner build --delete-conflicting-outputs"
+
+# flutter launcher icons
+Run  flutter pub get
+     flutter pub run flutter_launcher_icons:main
+
+For generating icons
+https://romannurik.github.io/AndroidAssetStudio/
+
+For generating launcher icons
+https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=circle&effects=none&name=ic_launcher
+
+For generating only notification icon
+https://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=image&source.space.trim=1&source.space.pad=0&name=ic_stat_bd_logo
+
+
+# flutter native splash
+Android 12: App icon without an icon background: This should be 1152×1152 pixels, and fit within a circle 768 pixels in diameter.
+Create: flutter pub run flutter_native_splash:create
+Remove: flutter pub run flutter_native_splash:remove

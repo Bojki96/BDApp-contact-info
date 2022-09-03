@@ -62,27 +62,27 @@ ThemeData theme = ThemeData(
       letterSpacing: -0.3,
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
     border: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
     focusedErrorBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
     errorBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
     disabledBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
+      borderSide: const BorderSide(color: Colors.black),
       borderRadius: BorderRadius.circular(8),
     ),
   ),

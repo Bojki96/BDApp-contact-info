@@ -11,7 +11,7 @@ class LocalNotifications {
   // TODO: HOW TO REMOVE FROM STATIC
   static final BehaviorSubject<Notifications> didRecievedSubject =
       BehaviorSubject<Notifications>();
-  static void init() async {
+  static Future init() async {
     tz.initializeTimeZones();
     _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../screens/landing_screen.dart';
+import '../screens/testing_screen.dart';
 
 class ErrorScreen extends StatelessWidget {
   const ErrorScreen({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ final mainRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/landing',
-      builder: (context, state) => const LandingScreen(),
+      builder: (context, state) => const TestingScreen(),
     ),
     // GoRoute(
     //   path: '/login',

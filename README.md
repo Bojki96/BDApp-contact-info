@@ -20,6 +20,8 @@ Run flutter upgrade
 Run flutter pub upgrade --major-versions
 Check all TODOs
 Remove unnecesary dependedcies
+TODO MAYBE FLUTTER GEN WONT WORK BECAUSE I DID NOT RUN PUB GLOBAL ACITVATE
+TODO AD .VSCODE INSIDE GITIGNORE
 
 # freezed setup 05.07.2022.
 

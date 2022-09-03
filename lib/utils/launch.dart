@@ -1,6 +1,5 @@
 import 'package:url_launcher/url_launcher.dart';
 
-// TODO: CHECK IF EVERY LAUNCH WORKS
 class Launch {
   static void url(String url) async {
     if (!await launchUrl(Uri.parse(url))) {

@@ -3,8 +3,6 @@ import 'package:flutter_template/notifications/local_notifications.dart';
 import 'package:flutter_template/typography.dart';
 import 'package:flutter_template/utils/launch.dart';
 
-final LocalNotifications _localNotifications = LocalNotifications();
-
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);
 

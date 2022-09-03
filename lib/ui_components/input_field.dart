@@ -3,7 +3,7 @@ import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../typography.dart';
 import '../theme.dart';
-import 'error_messages.dart';
+import '../forms/error_messages.dart';
 
 typedef SuffixIconBuilder = Widget Function(Color color)?;
 

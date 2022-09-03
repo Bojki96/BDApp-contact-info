@@ -14,10 +14,6 @@ class LocalStorage {
     }
   }
 
-  static close() async {
-    await Hive.close();
-  }
-
   static Future put(
     String boxName, {
     required final key,
@@ -31,6 +27,37 @@ class LocalStorage {
     required final key,
   }) {
     return Hive.box(boxName).get(key);
+  }
+
+  static close() async {
+    await Hive.close();
+  }
+
+  static delete({
+    required String boxName,
+    required final key,
+  }) {
+    Hive.box(boxName).delete(key);
+  }
+
+  static deleteAt({
+    required String boxName,
+    required int index,
+  }) {
+    Hive.box(boxName).deleteAt(index);
+  }
+
+  static deleteAll({
+    required String boxName,
+    required final List keys,
+  }) {
+    Hive.box(boxName).deleteAll(keys);
+  }
+
+  static deleteFromDisk(
+    String boxName,
+  ) {
+    Hive.box(boxName).deleteFromDisk();
   }
 
   static keysPreview(String boxName) {

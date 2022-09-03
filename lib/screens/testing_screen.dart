@@ -4,6 +4,8 @@ import 'package:flutter_template/local_storage/hive/local_storage_box.dart';
 import 'package:flutter_template/local_storage/simple_preferences.dart';
 import 'package:flutter_template/notifications/local_notifications.dart';
 import 'package:flutter_template/typography.dart';
+import 'package:flutter_template/ui_components/custom_dialog.dart';
+import 'package:flutter_template/ui_components/dialog.dart';
 import 'package:flutter_template/utils/launch.dart';
 
 class TestingScreen extends StatefulWidget {
@@ -152,6 +154,16 @@ class _TestingScreenState extends State<TestingScreen> {
     );
   }
 
+  Widget _buildDialogTest() {
+    return TextButton(
+      onPressed: () => showUIDialog(
+        context,
+        child: const CustomDialog(),
+      ),
+      child: TextType.p1('Test UI Dialog'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -164,6 +176,7 @@ class _TestingScreenState extends State<TestingScreen> {
           ),
           _buildLocalNotificationTest(),
           _buildLocalStorageTest(),
+          _buildDialogTest(),
         ],
       ),
     );

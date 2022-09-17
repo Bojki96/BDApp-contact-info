@@ -6,6 +6,7 @@ import 'package:flutter_template/notifications/local_notifications.dart';
 import 'package:flutter_template/typography.dart';
 import 'package:flutter_template/ui_components/custom_dialog.dart';
 import 'package:flutter_template/ui_components/dialog.dart';
+import 'package:flutter_template/ui_components/toast.dart';
 import 'package:flutter_template/utils/launch.dart';
 
 class TestingScreen extends StatefulWidget {
@@ -164,6 +165,18 @@ class _TestingScreenState extends State<TestingScreen> {
     );
   }
 
+  Widget _buildToastTest() {
+    return ElevatedButton(
+      onPressed: () => showToastMessage(
+        context,
+        child: ToastMessage(
+          child: TextType.p1('HELLOOOO'),
+        ),
+      ),
+      child: TextType.h3('Show Toast'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -177,6 +190,7 @@ class _TestingScreenState extends State<TestingScreen> {
           _buildLocalNotificationTest(),
           _buildLocalStorageTest(),
           _buildDialogTest(),
+          _buildToastTest(),
         ],
       ),
     );

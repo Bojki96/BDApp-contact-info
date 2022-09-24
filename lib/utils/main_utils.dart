@@ -30,3 +30,16 @@ String formatCurrency(
     decimalDigits: decimalDigits,
   ).format(number);
 }
+
+double mapRange(
+  double initialValue,
+  double limitValue,
+  double initialValueToMapOn,
+  double limitValueToMapOn,
+  double changingValue,
+) {
+  return initialValue +
+      (limitValue - initialValue) /
+          (limitValueToMapOn - initialValueToMapOn) *
+          (changingValue - initialValueToMapOn);
+}

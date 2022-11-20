@@ -22,9 +22,21 @@ class $EnvironmentsGen {
   String get stg => 'environments/stg.env';
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/pricalice.png
+  AssetGenImage get pricalice =>
+      const AssetGenImage('assets/images/pricalice.png');
+
+  /// File path: assets/images/zzzleep.png
+  AssetGenImage get zzzleep => const AssetGenImage('assets/images/zzzleep.png');
+}
+
 class Assets {
   Assets._();
 
+  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $EnvironmentsGen environments = $EnvironmentsGen();
 }
 

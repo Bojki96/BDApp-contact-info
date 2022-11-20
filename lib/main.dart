@@ -2,30 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/local_storage/hive/local_storage.dart';
-import 'package:flutter_template/local_storage/hive/local_storage_box.dart';
-import 'package:flutter_template/notifications/local_notifications.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 import 'app.dart';
 import 'local_storage/simple_preferences.dart';
 
-// TODO: ADD FLAVOURS
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  await LocalStorage.init(boxes: [
-    LocalStorageBox.name.userInfo,
-    LocalStorageBox.name.test,
-  ]);
   await SimplePreferences.init();
-  await LocalNotifications.init();
-
-// TODO: SET ORIENTATION
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
-
   await Future.wait([]);
 
   // This captures errors reported by the Flutter framework.

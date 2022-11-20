@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class ThemeColors {
   static const primaryBackground = Color(0xFFDEE8FF);
   static const primaryLight = Color(0xFFABC4FF);
-  static const primary = Color(0xFF3B6BDB);
+  static const onPrimary = Colors.white;
+  static const primary = Colors.red;
   static const primaryMid = Color(0xFF2D52A8);
   static const darkGray = Color(0xFF34405C);
   static const midGray = Color(0x8034405C);
   static const lightGray = Color(0x4034405C);
   static const extraLightGray = Color(0x0D34405C);
-  static const backgroundGray = Color(0xFFF5F5F7);
+  static const background = Colors.black;
   static const backgroundGrayNew = Color(0xFFEEEEEE);
   static const errorLight = Color(0xFFFFDEDE);
   static const errorRegular = Color(0xFFA82D2D);
@@ -28,7 +29,7 @@ ThemeData theme = ThemeData(
     onSecondary: ThemeColors.midGray,
     error: ThemeColors.errorRegular,
     onError: ThemeColors.errorLight,
-    background: ThemeColors.backgroundGrayNew,
+    background: ThemeColors.background,
     onBackground: ThemeColors.darkGray,
     surface: Colors.white,
     onSurface: ThemeColors.darkGray,
@@ -40,7 +41,7 @@ ThemeData theme = ThemeData(
   textTheme: const TextTheme(
     bodyText2: TextStyle(
       fontSize: 16,
-      color: ThemeColors.darkGray,
+      color: Colors.white,
     ),
   ),
   iconTheme: const IconThemeData(
@@ -48,7 +49,7 @@ ThemeData theme = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: ThemeColors.backgroundGray,
+    fillColor: ThemeColors.background,
     contentPadding: const EdgeInsets.all(16),
     errorStyle: const TextStyle(
       fontSize: 12.8,

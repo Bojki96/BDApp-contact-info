@@ -41,27 +41,22 @@ dev_dependencies:
   json_serializable: ^6.2.0
   flutter_gen_runner: ^4.3.0
   flutter_native_splash: ^2.2.8
+  rename: ^2.0.1
 
 flutter_gen:
   integrations:
     flutter_svg: true
 
-# TODO: INSERT LOGO
-# flutter_icons:
-#   ios: true
-#   android: true
-#   image_path_ios: "assets/icons/gloria_icon.png"
-#   image_path_android: "assets/icons/gloria_icon.png"
+flutter_icons:
+  web:
+    generate: true
+    image_path: "assets/images/bdapp_logo.png"
+    background_color: "#211F1F"
 
-# TODO: INSERT SPLASH SCREEN
-# flutter_native_splash:
-#    color: "#42a5f5"
-#    image: assets/icons/gloria_icon.png
-#    web: false
-#    fullscreen: true
-#    android_12:
-#     color: "#42a5f5"
-#     image: assets/android12splash.png
+flutter_native_splash:
+   color: "#211F1F"
+   image: assets/images/bdapp_logo.png
+   fullscreen: true
 
 flutter:
   uses-material-design: true

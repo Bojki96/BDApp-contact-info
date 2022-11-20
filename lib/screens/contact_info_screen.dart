@@ -17,46 +17,46 @@ const ContactInfo contactInfo = ContactInfo(
 class ContactInfoScreen extends StatelessWidget {
   const ContactInfoScreen({Key? key}) : super(key: key);
 
+  _buildInfoRow({required Widget icon, required String text}) {
+    return Row(
+      children: [
+        icon,
+        const SizedBox(width: 8),
+        TextType.p1(text),
+        const SizedBox(height: 24),
+      ],
+    );
+  }
+
   _buildMainInfo() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextType.h0(
           contactInfo.companyName,
           padding: const EdgeInsets.only(bottom: 4),
         ),
-        TextType.p1(
-          contactInfo.person,
-          padding: const EdgeInsets.only(bottom: 4),
+        _buildInfoRow(
+          icon: IconButton(
+            onPressed: () => Launch.mail(contactInfo.email),
+            icon: const Icon(Icons.mail),
+          ),
+          text: contactInfo.email,
         ),
-        Row(
-          children: [
-            IconButton(
-              onPressed: () => Launch.mail(contactInfo.email),
-              icon: const Icon(Icons.mail),
+        _buildInfoRow(
+          icon: IconButton(
+            onPressed: () => Launch.url(
+              'https://www.google.com/maps/place/Rijeka/@45.3242001,14.3746289,12z/data=!4m6!3m5!1s0x4764a12517aabe2d:0x373c6f383dcbb670!8m2!3d45.3270631!4d14.442176!16zL20vMDFyM3M1',
             ),
-            const SizedBox(width: 8),
-            TextType.p1(
-              contactInfo.email,
-            ),
-            const SizedBox(height: 24),
-          ],
+            icon: const Icon(Icons.location_on_sharp),
+          ),
+          text: '${contactInfo.city}, ${contactInfo.country}',
         ),
-        Row(
-          children: [
-            IconButton(
-              onPressed: () => Launch.url(
-                'https://www.google.com/maps/place/Rijeka/@45.3242001,14.3746289,12z/data=!4m6!3m5!1s0x4764a12517aabe2d:0x373c6f383dcbb670!8m2!3d45.3270631!4d14.442176!16zL20vMDFyM3M1',
-              ),
-              icon: const Icon(Icons.location_on_sharp),
-            ),
-            const SizedBox(width: 8),
-            TextType.p1(
-              '${contactInfo.city}, ${contactInfo.country}',
-            ),
-            const SizedBox(height: 24),
-          ],
+        _buildInfoRow(
+          icon: const Padding(
+              padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+              child: Icon(Icons.person)),
+          text: contactInfo.person,
         ),
       ],
     );
@@ -66,7 +66,6 @@ class ContactInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // elevation: 0,
         backgroundColor: ThemeColors.backgroundGrayNew,
         centerTitle: false,
         title: Row(
@@ -92,20 +91,19 @@ class ContactInfoScreen extends StatelessWidget {
               const SizedBox(height: 32),
               AppInfo(
                 title: 'Pričalice-RI',
+                titleColor: Theme.of(context).colorScheme.primary,
                 content:
                     'Digital calendar solution for Aunt Storytellers from Rijeka. Aunts and Uncles Storytellers are one of those everyday heroes who make the world better by telling goodnight stories to children who are unfortunately in the hospital. To help them with time management and organisation, a mobile application has been created that makes it easier for them to organize appointments for telling stories.',
-                image: Assets.images.pricalice.image(
-                  fit: BoxFit.cover,
-                ),
+                image: AppImage(imagePath: Assets.images.pricalice),
               ),
-
-              // CompanyApp(
-              //   child1: const AppInfo(
-              //       title: 'zZzleep',
-              //       content:
-              //           'Simple sleep diary for tracking your sleep every day, calculating the amount of sleep, and optionalyy record some thoughts, dreams, notes, etc.'),
-              //   child2: Assets.images.zzzleep.image(fit: BoxFit.cover),
-              // ),
+              const SizedBox(height: 62),
+              AppInfo(
+                title: 'zZzleep',
+                titleColor: const Color(0xFF1A237E),
+                content:
+                    'Simple sleep diary for tracking your sleep every day, calculating the amount of sleep, and optionalyy record some thoughts, dreams, notes, etc.',
+                image: AppImage(imagePath: Assets.images.zzzleep),
+              ),
             ],
           ),
         ),

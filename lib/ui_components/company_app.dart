@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/gen/assets.gen.dart';
+import 'package:flutter_template/theme.dart';
 import 'package:flutter_template/typography.dart';
 
 class CompanyApp extends StatelessWidget {
@@ -18,11 +19,12 @@ class CompanyApp extends StatelessWidget {
         Flexible(flex: 4, child: child1),
         const Spacer(),
         ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxHeight: 200,
-              maxWidth: 200,
-            ),
-            child: child2),
+          constraints: const BoxConstraints(
+            maxHeight: 200,
+            maxWidth: 200,
+          ),
+          child: child2,
+        ),
       ],
     );
   }
@@ -32,12 +34,14 @@ class AppInfo extends StatelessWidget {
   final String title;
   final String content;
   final Widget image;
-  const AppInfo({
-    Key? key,
-    required this.title,
-    required this.content,
-    required this.image,
-  }) : super(key: key);
+  final Color? titleColor;
+  const AppInfo(
+      {Key? key,
+      required this.title,
+      required this.content,
+      required this.image,
+      this.titleColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +51,7 @@ class AppInfo extends StatelessWidget {
       children: [
         TextType.h0(
           title,
+          color: titleColor ?? ThemeColors.darkGray,
           padding: const EdgeInsets.only(bottom: 16),
         ),
         Row(
@@ -77,10 +82,13 @@ class AppImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 50,
+      height: 150,
+      width: 150,
+      clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        border: Border.all(),
+        border: Border.all(
+          color: ThemeColors.gray,
+        ),
         borderRadius: BorderRadius.circular(12),
       ),
       child: imagePath.image(

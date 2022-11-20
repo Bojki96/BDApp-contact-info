@@ -4,7 +4,8 @@ class ThemeColors {
   static const primaryBackground = Color(0xFFDEE8FF);
   static const primaryLight = Color(0xFFABC4FF);
   static const onPrimary = Colors.white;
-  static const primary = Colors.red;
+  static const primary = Color(0xFFED4C4C);
+  static const gray = Color(0xFF211F1F);
   static const primaryMid = Color(0xFF2D52A8);
   static const darkGray = Color(0xFF34405C);
   static const midGray = Color(0x8034405C);
@@ -12,8 +13,7 @@ class ThemeColors {
   static const extraLightGray = Color(0x0D34405C);
   static const background = Colors.black;
   static const backgroundGrayNew = Color(0xFFEEEEEE);
-  static const errorLight = Color(0xFFFFDEDE);
-  static const errorRegular = Color(0xFFA82D2D);
+
   static const alertLight = Color(0xFFFFFCDE);
   static const alertRegular = Color(0xFFA89C2D);
   static const successLight = Color(0xFFDEFFF1);
@@ -27,8 +27,8 @@ ThemeData theme = ThemeData(
     onPrimary: Colors.white,
     secondary: ThemeColors.midGray,
     onSecondary: ThemeColors.midGray,
-    error: ThemeColors.errorRegular,
-    onError: ThemeColors.errorLight,
+    error: ThemeColors.primary,
+    onError: ThemeColors.onPrimary,
     background: ThemeColors.background,
     onBackground: ThemeColors.darkGray,
     surface: Colors.white,
@@ -54,7 +54,7 @@ ThemeData theme = ThemeData(
     errorStyle: const TextStyle(
       fontSize: 12.8,
       letterSpacing: -0.3,
-      color: ThemeColors.errorRegular,
+      color: ThemeColors.primary,
     ),
     hintStyle: const TextStyle(
       fontWeight: FontWeight.w700,

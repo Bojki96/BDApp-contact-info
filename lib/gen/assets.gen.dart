@@ -25,6 +25,10 @@ class $EnvironmentsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/bdapp_logo.png
+  AssetGenImage get bdappLogo =>
+      const AssetGenImage('assets/images/bdapp_logo.png');
+
   /// File path: assets/images/pricalice.png
   AssetGenImage get pricalice =>
       const AssetGenImage('assets/images/pricalice.png');

@@ -49,12 +49,9 @@ flutter_gen:
 flutter_icons:
   android: true
   ios: true
+  web: true
   image_path: "assets/images/bdapp_logo.png"
   min_sdk_android: 21
-  web:
-    generate: true
-    image_path: "assets/images/bdapp_logo.png"
-    background_color: "#211F1F"
 
 flutter_native_splash:
    color: "#211F1F"

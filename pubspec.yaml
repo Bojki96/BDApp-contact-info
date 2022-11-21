@@ -1,5 +1,5 @@
-name: flutter_template
-description: Main Flutter template for building apps.
+name: bd_app_contact_info
+description: Page for support.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -50,6 +50,7 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/images/bdapp_logo.png"
+  min_sdk_android: 21
   web:
     generate: true
     image_path: "assets/images/bdapp_logo.png"

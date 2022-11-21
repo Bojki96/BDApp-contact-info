@@ -1,4 +1,4 @@
-# flutter_template
+# bdapp-contact-info
 
 A new Flutter project.
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/gen/assets.gen.dart';
-import 'package:flutter_template/theme.dart';
-import 'package:flutter_template/typography.dart';
+
+import '../gen/assets.gen.dart';
+import '../theme.dart';
+import '../typography.dart';
 
 class CompanyApp extends StatelessWidget {
   final Widget child1;

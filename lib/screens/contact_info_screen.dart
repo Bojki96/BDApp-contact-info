@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/entities/contact_info.dart';
-import 'package:flutter_template/gen/assets.gen.dart';
-import 'package:flutter_template/theme.dart';
-import 'package:flutter_template/typography.dart';
-import 'package:flutter_template/ui_components/company_app.dart';
-import 'package:flutter_template/utils/launch.dart';
+
+import '../entities/contact_info.dart';
+import '../gen/assets.gen.dart';
+import '../theme.dart';
+import '../typography.dart';
+import '../ui_components/company_app.dart';
+import '../utils/launch.dart';
 
 const ContactInfo contactInfo = ContactInfo(
   companyName: 'BD App',

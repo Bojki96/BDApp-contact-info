@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/typography.dart';
-import 'package:flutter_template/ui_components/dialog.dart';
+
+import '../typography.dart';
+import 'dialog.dart';
 
 class CustomDialog extends StatelessWidget {
   const CustomDialog({Key? key}) : super(key: key);

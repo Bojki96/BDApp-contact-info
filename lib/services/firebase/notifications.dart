@@ -4,7 +4,7 @@
 //       {@required String title, @required String body, @required int id}) async {
   
 //       final androidPlatformChannelSpecifics = AndroidNotificationDetails(
-//           'FLUTTER_TEMPLATE_ID', 'FLUTTER_TEMPLATE_CHANNEL',
+//           'bdapp-contact-info_ID', 'bdapp-contact-info_CHANNEL',
 //           styleInformation: BigTextStyleInformation(''),
 //           color: const Color.fromARGB(255, 255, 0, 0),
 //           enableLights: true,

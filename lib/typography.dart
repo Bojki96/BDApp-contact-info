@@ -1,5 +1,5 @@
+import 'package:bd_app_contact_info/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/theme.dart';
 
 class TextType {
   static Widget h0(

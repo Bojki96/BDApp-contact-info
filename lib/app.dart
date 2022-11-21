@@ -1,8 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_template/routing/main_router.dart';
-import 'package:flutter_template/theme.dart';
+
+import 'routing/main_router.dart';
+import 'theme.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);

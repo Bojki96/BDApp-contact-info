@@ -1,6 +1,6 @@
 {
-    "name": "flutter_template",
-    "short_name": "flutter_template",
+    "name": "bdapp-contact-info",
+    "short_name": "bdapp-contact-info",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

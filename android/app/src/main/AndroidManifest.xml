@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_template">
+    package="com.bdapp.contact-info">
    <application
         android:label="BD App contact info"
         android:name="${applicationName}"

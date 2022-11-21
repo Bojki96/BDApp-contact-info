@@ -41,7 +41,6 @@ dev_dependencies:
   json_serializable: ^6.2.0
   flutter_gen_runner: ^4.3.0
   flutter_native_splash: ^2.2.8
-  rename: ^2.0.1
 
 flutter_gen:
   integrations:

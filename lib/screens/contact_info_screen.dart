@@ -53,9 +53,10 @@ class ContactInfoScreen extends StatelessWidget {
           text: '${contactInfo.city}, ${contactInfo.country}',
         ),
         _buildInfoRow(
-          icon: const Padding(
-              padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
-              child: Icon(Icons.person)),
+          icon: const IconButton(
+            onPressed: null,
+            icon: Icon(Icons.person),
+          ),
           text: contactInfo.person,
         ),
       ],

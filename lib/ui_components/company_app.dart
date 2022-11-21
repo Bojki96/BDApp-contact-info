@@ -49,14 +49,17 @@ class AppInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        TextType.h0(
+        TextType.h2(
           title,
           color: titleColor ?? ThemeColors.darkGray,
           padding: const EdgeInsets.only(bottom: 16),
         ),
         Row(
           children: [
-            Flexible(flex: 4, child: TextType.p1(content)),
+            Flexible(
+              flex: 4,
+              child: TextType.p1(content),
+            ),
             const Spacer(),
             ConstrainedBox(
               constraints: const BoxConstraints(

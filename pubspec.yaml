@@ -26,7 +26,6 @@ dependencies:
   url_launcher: ^6.1.5
   flutter_riverpod: ^1.0.4
   shared_preferences: ^2.0.15
-  flutter_launcher_icons: ^0.9.2
   enum_to_string: ^2.0.1
   throttling: ^1.0.0
   rxdart: ^0.27.5
@@ -41,12 +40,16 @@ dev_dependencies:
   json_serializable: ^6.2.0
   flutter_gen_runner: ^4.3.0
   flutter_native_splash: ^2.2.8
+  flutter_launcher_icons: ^0.9.2
 
 flutter_gen:
   integrations:
     flutter_svg: true
 
 flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/bdapp_logo.png"
   web:
     generate: true
     image_path: "assets/images/bdapp_logo.png"

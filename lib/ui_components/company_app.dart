@@ -61,13 +61,7 @@ class AppInfo extends StatelessWidget {
               child: TextType.p1(content),
             ),
             const Spacer(),
-            ConstrainedBox(
-              constraints: const BoxConstraints(
-                maxHeight: 200,
-                maxWidth: 200,
-              ),
-              child: image,
-            ),
+            image,
           ],
         ),
       ],
@@ -85,8 +79,8 @@ class AppImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
-      width: 150,
+      height: 100,
+      width: 100,
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
         border: Border.all(

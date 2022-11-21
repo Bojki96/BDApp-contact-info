@@ -86,7 +86,8 @@ class ContactInfoScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          padding: EdgeInsets.fromLTRB(
+              16, 16, 16, MediaQuery.of(context).padding.bottom + 12),
           child: Column(
             children: [
               _buildMainInfo(),

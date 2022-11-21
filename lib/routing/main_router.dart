@@ -1,3 +1,4 @@
+import 'package:bd_app_contact_info/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -9,7 +10,12 @@ class ErrorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("Error main router")),
+      body: Center(
+        child: Text(
+          "Goodbye!",
+          style: TextStyle(color: ThemeColors.gray, fontSize: 21),
+        ),
+      ),
     );
   }
 }

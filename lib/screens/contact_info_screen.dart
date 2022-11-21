@@ -103,7 +103,7 @@ class ContactInfoScreen extends StatelessWidget {
                 title: 'zZzleep',
                 titleColor: const Color(0xFF1A237E),
                 content:
-                    'Simple sleep diary for tracking your sleep every day, calculating the amount of sleep, and optionalyy record some thoughts, dreams, notes, etc.',
+                    'Simple sleep diary for tracking your sleep every day, calculating the amount of sleep, and optionally record some thoughts, dreams, notes, etc.',
                 image: AppImage(imagePath: Assets.images.zzzleep),
               ),
             ],
